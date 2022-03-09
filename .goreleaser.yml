@@ -25,6 +25,7 @@ brews:
   tap:
     owner: takaishi
     name: homebrew-fomulas
+    branch: master
   commit_author:
     name: goreleaserbot
     email: goreleaser@carlosbecker.com
