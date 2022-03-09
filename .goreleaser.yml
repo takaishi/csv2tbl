@@ -22,16 +22,16 @@ changelog:
       - '^docs:'
       - '^test:'
 brews:
-  tap:
-    owner: takaishi
-    name: homebrew-fomulas
-    branch: master
-  commit_author:
-    name: goreleaserbot
-    email: goreleaser@carlosbecker.com
-  description: "`csv2tbl` is tool to convert csv to table."
-  homepage: "https://github.com/takaishi/csv2tbl"
-  install: |
-    bin.install Dir['csv2tbl']
-  test: |
-    system "#{bin}/csv2tbl"
+  - tap:
+      owner: takaishi
+      name: homebrew-fomulas
+      branch: master
+    commit_author:
+      name: goreleaserbot
+      email: goreleaser@carlosbecker.com
+    description: "`csv2tbl` is tool to convert csv to table."
+    homepage: "https://github.com/takaishi/csv2tbl"
+    install: |
+      bin.install Dir['csv2tbl']
+    test: |
+      system "#{bin}/csv2tbl"
