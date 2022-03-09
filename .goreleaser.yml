@@ -10,7 +10,7 @@ builds:
   - env:
       - CGO_ENABLED=0
     ldflags:
-      -X github.com/takaishi/csv2tbl/cmd.version={{.Version}}
+      -X github.com/takaishi/csv2tbl/cmd.versionStr={{.Version}}
 checksum:
   name_template: 'checksums.txt'
 snapshot:

@@ -27,6 +27,8 @@ import (
 )
 
 var cfgFile string
+var versionStr string
+var version bool
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
@@ -44,6 +46,11 @@ var rootCmd = &cobra.Command{
 }
 
 func _run() error {
+	if version {
+		fmt.Println("aa")
+		return nil
+	}
+
 	path := os.Args[1]
 	f, err := os.Open(path)
 	if err != nil {
@@ -100,6 +107,7 @@ func init() {
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	rootCmd.Flags().BoolVar(&version, "version", false, "Show version")
 }
 
 // initConfig reads in config file and ENV variables if set.
